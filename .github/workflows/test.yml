@@ -1,0 +1,10 @@
+name: Test
+on: [push]
+jobs:
+  Nx-Test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v3
+      - run: npm install
+      - run: npx nx run ui:test
